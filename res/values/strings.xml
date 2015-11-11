@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TaxiApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_activity_location">LocationActivity</string>
+    <string name="title_activity_get_drivers">GetDriversActivity</string>
+    <string name="title_activity_get_driver">GetDriverActivity</string>
+    <string name="title_activity_notify">NotifyActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_client_sign_up">ClientSignUpActivity</string>
+    <string name="title_activity_main_driver">MainDriverActivity</string>
+    <string name="title_activity_response">ResponseActivity</string>
+    <string name="title_activity_map_tracer">MapTracerActivity</string>
+    <string name="title_activity_get_route">GetRouteActivity</string>
+    <string name="title_activity_demande">DemandeActivity</string>
+
+</resources>

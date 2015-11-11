@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pcd.taxiapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <permission
+        android:name="com.pcd.taxiapp.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.pcd.taxiapp.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.example.gcm.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyC34upcWEmgKpmvTIriEhhWmmtk1L5Iq7I" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <receiver
+            android:name="com.pcd.taxiapp.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.pcd.taxiapp" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.pcd.taxiapp.GcmIntentService" />
+        <service
+            android:name="com.pcd.taxiapp.LocationService"
+            android:enabled="true" />
+
+        <activity
+            android:name="com.pcd.taxiapp.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.pcd.taxiapp.SignUpActivity"
+            android:label="@string/title_activity_sign_up" >
+        </activity>
+        <activity
+            android:name="com.pcd.taxiapp.GetDriverActivity"
+            android:label="@string/title_activity_get_driver"
+            android:parentActivityName="android.app.ListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.app.ListActivity" />
+        </activity>
+        <activity
+            android:name="com.pcd.taxiapp.NotifyActivity"
+            android:label="@string/title_activity_notify" >
+        </activity>
+        <activity
+            android:name="com.pcd.taxiapp.LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name="com.pcd.taxiapp.SearchActivity"
+            android:label="@string/title_activity_search" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.pcd.taxiapp.HomeActivity"
+            android:label="@string/title_activity_home" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.pcd.taxiapp.ClientSignUpActivity"
+            android:label="@string/title_activity_client_sign_up" >
+        </activity>
+        <activity
+            android:name="com.pcd.taxiapp.MainDriverActivity"
+            android:label="@string/title_activity_main_driver" >
+        </activity>
+        <activity
+            android:name="com.pcd.taxiapp.ResponseActivity"
+            android:label="@string/title_activity_response" >
+        </activity>
+        <activity
+            android:name="com.pcd.taxiapp.MapTracerActivity"
+            android:label="@string/title_activity_map_tracer" >
+        </activity>
+        <activity
+            android:name="com.pcd.taxiapp.GetRouteActivity"
+            android:label="@string/title_activity_get_route" >
+        </activity>
+        <activity
+            android:name="com.pcd.taxiapp.DemandeActivity"
+            android:label="@string/title_activity_demande" >
+        </activity>
+    </application>
+
+</manifest>
